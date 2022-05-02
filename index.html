@@ -5,6 +5,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+      html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  background: rgb(26,140,141);
+background: -moz-radial-gradient(center, ellipse cover, rgba(26,140,141,1) 0%, rgba(3,95,120,1) 100%);
+background: -webkit-radial-gradient(center, ellipse cover, rgba(26,140,141,1) 0%,rgba(3,95,120,1) 100%);
+background: radial-gradient(ellipse at center, rgba(26,140,141,1) 0%,rgba(3,95,120,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a8c8d', endColorstr='#035f78',GradientType=1 );
+}
+
+strong {
+  font-weight: bold;
+}
+
+.container-outer {
+  display: table;
+  width: 50%;
+  height: 50%;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+p {
+  color: #fff;
+}
+
+.main-text {
+  position: relative;
+}
+
+.top p, .bottom p {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 72px;
+  letter-spacing: 10px;
+  position: absolute;
+  width: 100%;
+}
+
+.top, .bottom {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+.bottom p {
+  bottom: 0px;
+}
+
+.top {
+  height: 32px;
+  animation-name: goUp;
+  
+}
+
+.bottom {
+  height: 41px;
+  animation-name: goDown;
+}
+
+.sub-text p {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-70%);
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.date {
+  margin-top: 20px;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+.date p {
+  position: absolute;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin: 0;
+  width: 100%;
+}
+@keyframes goUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-22px);
+  }
+}
+
+@keyframes goDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(22px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
     .cont{
       margin: auto;
     }
@@ -38,6 +177,26 @@
   <span class="w3-left w3-padding">Hey! I'm Zahra Sultan :-)</span>
   <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 </header>
+  
+  <div class="container-outer">
+  <div class="container">
+  <div class="main-text">
+    <div class="top">
+      <p>EID</p>
+    </div>
+    <div class="bottom">
+      <p>EID</p>
+    </div>
+    
+    <div class="sub-text">
+      <p>mubarak</p>
+    </div>
+  <div class="date">
+     <p>2022</p> 
+   </div>
+  </div>
+</div>
+</div>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
